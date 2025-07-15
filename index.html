@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our First Year Together</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #ffece8, #fff5f4);
+      color: #5f4b4b;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    header, section {
+      text-align: center;
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    header { animation-delay: 0.3s; }
+    section { animation-delay: 0.6s; }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #fc907e;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #ffa07a;
+    }
+
+    .days {
+      font-size: 2rem;
+      color: #ffc107;
+      margin: 10px 0;
+      animation: pulse 2s infinite;
+    }
+
+    .buttons button {
+      background-color: #fc907e;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .buttons button:hover {
+      background-color: #ff7660;
+      transform: scale(1.05);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 20px;
+      border-left: 3px solid #ffa07a;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    .event {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 80%;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .event:nth-child(even) { animation-delay: 1s; }
+    .event:nth-child(odd) { animation-delay: 1.2s; }
+
+    .event.left { margin-left: 0; }
+    .event.right { margin-left: auto; }
+
+    .event h3 { color: #fc907e; }
+    .event span { font-weight: 600; color: #ffc107; }
+
+    .letter-section {
+      background: #ffd5cb;
+      padding: 30px 20px;
+      border-radius: 10px;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1.4s;
+    }
+
+    .letter-section button {
+      background-color: #ff7660;
+      color: white;
+      font-size: 1.1rem;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(255, 118, 96, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .letter-section button:hover {
+      background-color: #ff4e3a;
+      transform: scale(1.08);
+    }
+
+    .letter-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 999;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .letter-popup.show {
+      display: block;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 998;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>First <span class="highlight">Year Love Anniversary</span> Together</h1>
+    <p class="days">365 Days</p>
+    <p>of love, laughter, and memories</p>
+    <br>
+    <div class="buttons">
+      <a href="#dreams"><button>Dreams</button></a>
+      <a href="#timeline"><button>Timeline</button></a>
+      <a href="#message"><button>Message</button></a>
+    </div>
+  </header>
+  <hr><br>
+
+  <section id="dreams">
+    <h2 class="highlight">Our Dreams</h2>
+    <p>Nammaluku vandha azhagana kanavugal...</p>
+    <div class="timeline">
+      <div class="event left">
+        <h3>Balcony Hug</h3>
+        <p>Neeyum Naanum namma veetu balcony la ninnu pesitu irukom appo bayangarama mazha peiyudhu appo nee enna hug panna naan un forehead la kiss pannen.</p>
+      </div>
+      <div class="event right">
+        <p><span>Train Travel</span></p>
+        <p>Namma oru train la poitu irukom appo namma kuda azhaga kutty ah oru papa namma kuda irundha adhu future la vara pora Nitara va dhan irukum.</p>
+      </div>
+      <div class="event left">
+        <h3>Chasing Firing</h3>
+        <p>Un anna oru jeep la nammala thorathite vandhan namma bike la oru kaatukulla escape aitu irundhom appo un anna gun vechu shoot panna try pannan.</p>
+      </div>
+      <div class="event right">
+        <p><span>ATM Kiss</span></p>
+        <p>ATM la irundhapo un pinnadi ninnu naan un neck la kiss pannen adha unnala nejathula feel panna mudinjudhu, seekrame andha scene recreate pannalam.</p>
+      </div>
+      <div class="event left">
+        <h3>Candle Night</h3>
+        <p>Oru room la neeyum naanum mattum irukom appo nalla mazha penju power cut airuchu appo oru candle vechutu oruthar mela oruthar saanju night full ah pesitu irundhom.</p>
+      </div>
+      <div class="event right">
+        <p><span>Sleep Hug</span></p>
+        <p>Naan unga veetuku vandhutu irukapo un amma naan vandhadhum unna kadaiku vara sonnanga aana namma pesitu bed la thoongitu irundhom adhuvum hug pannitu.</p>
+      </div>
+    </div>
+  </section>
+  <section id="timeline">
+    <hr><br>
+    <h3>Timeline</h3><br>
+    <p>
+     April 18 2023- Sree kita irundhu oru message Hii nu, Annaiku enaku theriyadhu nee dhan life long enkuda irundhu enna tholla panna poranu.<br><br>
+      July 17 2024- Love eppo epdi vandhuchunu therila aana love nu nalla theriyum Epdinu therila aana unkita enaku unmela feelings irukunu sonna aprm enakulla oru confidence nee ok solradhuku munnadiye en friends ku chocolates kuduthu annaiku full ah ore kushi ah suthitu irundhen.<br><br>
+    Jan 11 2025- Namma commit aagi first meet Naishu marriage ku porenu oru poii, Ooru suthi paaka poromnu oru poii. Annaiku andha beach la un kai pidichapo romba nervous ah irundhalum bayangara kushi ah irundhuchu, Nee kudutha KitKat, shirt, Rose adhu edhume naan expect pannala adhu pidichirundhuchu, auto la pakkathula irundhapo, Bus la eye-contact pannite ponadhu, kai korthute irundhadhu, Naishu veetuku veliya ninnu kannulaye pesitu irundhadhu Final ah return bus la porapo nee en shoulder la saanjadhu romba nalla irundhuchu seekrame adhe mari namma innoru meet pannuvom adhu idha vida nalla iruka podhu.<br><br>
+    Future- Naraya ooru suthuvom, Theatre, Beach, Park, Mall, Snow World, Bike Ride, Restaurant, Shopping, naraya naraya edathuku onna povom neeyum naanum mattum. <br><br>
+  </p><br><hr>
+  </section>
+  <section class="letter-section" id="message">
+    <h2>A Letter From Your TubeLight</h2>
+    <h3 style="color: #ffb300;">Words from My Heart</h3><br>
+    <button onclick="showLetter()">💌 Open My Heart</button>
+  </section>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="letter-popup" id="letter">
+    <h3 style="color:#fc907e">Hey GunduBulb uhh!!</h3>
+    <p style="margin-top: 10px; line-height: 1.6">
+      Idhu nammaloda 1st year Love Anniversary. Namma ennadhan Long Distance Relationship la irundhalum namakulla understanding iruku, indha one year la naraya chinna chinna sanda vandhuruku aana adhellam nammale dhan solve pannom.<br>
+      <br>
+      Ennala en life long unkuda sanda potu samadhanam aaga mudiyumnu nambikka iruku. Namma onna Happy ah irupom Nitara, Nihan, Nee, Naan, Naam nu oru life adhu super ah irukum 
+     <br><br>
+      Ennala unna miss panna mudiyadhu enaku nee en life full ah venum. Naan unna evlo nalla paathupanu therila aana namma pasanga "Appa Amma va romba Love panrarula" nu solla veppen.
+      <br><br>
+      <center>❤️I Love You Sree❤️</center>
+      <br>
+      <p style="text-align: right;">~Kaadhaludan Kamugan</p>
+    </p>
+  </div>
+
+  <script>
+    function showLetter() {
+      document.getElementById("letter").classList.add("show");
+      document.getElementById("overlay").classList.add("show");
+    }
+
+    document.getElementById("overlay").addEventListener("click", function () {
+      document.getElementById("letter").classList.remove("show");
+      this.classList.remove("show");
+    });
+  </script>
+</body>
+</html>
